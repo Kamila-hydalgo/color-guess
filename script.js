@@ -46,14 +46,14 @@ allBalls.addEventListener('click', (event) => {
     answer.innerText = 'Errou! Tente novamente!';
     points = 0;
   }
-  score.innerText = `Score: ${points}`;
+  score.innerText = `Placar: ${points}`;
 });
 
 // Requisito 6.
 const resetRestart = document.querySelector('#reset-game');
 
 resetRestart.addEventListener('click', () => {
-  answer.innerText = "Escolha uma cor";
+  answer.innerText = 'Escolha uma cor';
   addColorBalls();
   addColorText();
 });

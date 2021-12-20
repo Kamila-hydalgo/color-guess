@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: purple;
+  background-color: rgb(3, 107, 82);
 }
 
 h1 {
@@ -22,13 +22,15 @@ p {
 }
 
 #reset-game {
-  width: 150px;
+  width: 100px;
   height: 32px;
+  border: solid black 2px;
   border-radius: 5px;
   text-align: center;
   color: black;
   font-weight: 700;
   font-size: 0.8rem;
+  margin-bottom: 10px;
 }
 
 #all-balls {
