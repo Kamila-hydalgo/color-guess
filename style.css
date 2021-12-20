@@ -1,8 +1,6 @@
 .ball {
   border-radius: 100%;
-  margin-left: 20px;
   border: solid black 1px;
-  display: inline-block;
   width: 80px;
   height: 80px;
 }
@@ -24,5 +22,24 @@ p {
 }
 
 #reset-game {
-  margin-left: 300px;
+  width: 150px;
+  height: 32px;
+  border-radius: 5px;
+  text-align: center;
+  color: black;
+  font-weight: 700;
+  font-size: 0.8rem;
+  align-self: center;
+}
+
+#all-balls {
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  border: solid black 2px;
+  transform: translate(150px, 150px);
+  max-width: 900px;
+  max-height: 900px;
 }

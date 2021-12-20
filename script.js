@@ -1,4 +1,6 @@
 const answer = document.querySelector('#answer');
+const score = document.querySelector('#score');
+let points = 0;
 // Requisito 4.
 function randomColor() {
   const aleatColor1 = Math.round(Math.random() * 255);
@@ -39,9 +41,12 @@ allBalls.addEventListener('click', (event) => {
   const colorElementoClicado = elementoClicado.style.backgroundColor.replace('rgb', '');
   if (colorElementoClicado === textRgb.innerText) {
     answer.innerText = 'Acertou!';
+    points += 3;
   } else {
     answer.innerText = 'Errou! Tente novamente!';
+    points = 0;
   }
+  score.innerText = `Score: ${points}`;
 });
 
 //Requisito 6.
@@ -52,3 +57,4 @@ resetRestart.addEventListener('click', () => {
   addColorBalls();
   addColorText();
 });
+
