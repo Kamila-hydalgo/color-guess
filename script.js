@@ -1,6 +1,7 @@
 const answer = document.querySelector('#answer');
 const score = document.querySelector('#score');
 let points = 0;
+
 // Requisito 4.
 function randomColor() {
   const aleatColor1 = Math.round(Math.random() * 255);
@@ -10,7 +11,7 @@ function randomColor() {
   return newColor;
 }
 
-function addColorBalls () {
+function addColorBalls() {
   const colorBall = document.querySelectorAll('.ball');
   for (let index = 0; index < colorBall.length; index += 1) {
     colorBall[index].style.backgroundColor = `rgb${randomColor()}`;
@@ -18,7 +19,7 @@ function addColorBalls () {
 }
 addColorBalls();
 
-function addColorText () {
+function addColorText() {
   const randomNumber = Math.round(Math.random() * 5);
   const ballSelected = document.querySelectorAll('.ball')[randomNumber];
   const rgbSelected = ballSelected.style.backgroundColor;
@@ -27,8 +28,7 @@ function addColorText () {
 }
 addColorText();
 
-// Requisito 5.
-
+// Requisito 5 e 7.
 const allBalls = document.querySelector('#all-balls');
 const randomNumber = Math.round(Math.random() * 5);
 const ballSelected = document.querySelectorAll('.ball')[randomNumber];
@@ -49,12 +49,11 @@ allBalls.addEventListener('click', (event) => {
   score.innerText = `Score: ${points}`;
 });
 
-//Requisito 6.
-const resetRestart = document.querySelector("#reset-game");
+// Requisito 6.
+const resetRestart = document.querySelector('#reset-game');
 
 resetRestart.addEventListener('click', () => {
   answer.innerText = "Escolha uma cor";
   addColorBalls();
   addColorText();
 });
-
